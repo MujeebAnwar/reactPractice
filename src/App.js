@@ -6,7 +6,7 @@ import Counter from './components/Counter';
 
 function App() {
 
-  let check = "hello";
+
   return (
 
 

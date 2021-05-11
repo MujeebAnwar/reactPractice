@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/@fortawesome/react-fontawesome/';
-
+// import '../node_modules/@fortawesome/react-fontawesome/';
+import 'font-awesome/css/font-awesome.min.css';
 ReactDOM.render(
 
   <App />,

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import {
+
     Collapse,
     Navbar,
     NavbarToggler,
@@ -11,12 +13,8 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
-    NavbarText, Button, Spinner
+    Button
 } from 'reactstrap';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 
 class CustomNavbar extends Component {
@@ -27,10 +25,13 @@ class CustomNavbar extends Component {
 
         this.state = {
             isOpen: false,
+            isLoading: "",
 
         }
 
+
     }
+
 
     toggle = () => {
         this.setState({
@@ -43,8 +44,12 @@ class CustomNavbar extends Component {
 
 
 
+
+
     render() {
 
+
+        let iconClass = this.props.isLoading ? 'fa fa-circle-o-notch fa-spin' : 'fa fa-circle-o-notch'
 
         return <div>
 
@@ -78,13 +83,17 @@ class CustomNavbar extends Component {
                         </UncontrolledDropdown>
                     </Nav>
 
-                    <Button color="primary" className="m-1">
+
+                    <Button color="primary" className="m-1" onClick={this.props.buttonHandleClick}>
                         Fetch Data
-                     <FontAwesomeIcon icon={faSpinner} />
+                         <i className={iconClass} ></i>
+
                     </Button>
 
                 </Collapse>
             </Navbar>
+
+
 
 
         </div >
